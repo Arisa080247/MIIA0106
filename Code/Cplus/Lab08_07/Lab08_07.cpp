@@ -1,20 +1,41 @@
-// Lab08_07.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-//��÷��ͧ���駷��7
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+// กำหนดโครงสร้าง struct
+struct Student {
+    string studentID;
+    string studentname;
+    string Field_of_study;
+    string Grade;
+};
+
+int main() {
+    Student students[10]; // สร้างอาร์เรย์ของ struct ขนาด 10
+
+    // รับข้อมูลนักศึกษา
+    for (int i = 0; i < 10; i++) {
+        cout << "Enter information for student " << i + 1 << ":" << endl;
+        cout << "student ID: ";
+        cin >> students[i].studentID;
+        cout << "student name: ";
+        cin >> students[i].studentname;
+        cout << "Field of study: ";
+        cin >> students[i].Field_of_study;
+        cout << "GPA: ";
+        cin >> students[i].Grade;
+        cout << endl;
+    }
+
+    // แสดงข้อมูลนักศึกษา
+    cout << "Student Information:" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << "Student " << i + 1 << ":" << endl;
+        cout << "  student ID: " << students[i].studentID << endl;
+        cout << "  student name: " << students[i].studentname << endl;
+        cout << "  Field of study: " << students[i].Field_of_study << endl;
+        cout << "  GPA: " << students[i].Grade << endl;
+        cout << endl;
+    }
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
