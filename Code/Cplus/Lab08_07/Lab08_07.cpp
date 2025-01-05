@@ -1,6 +1,6 @@
 // Lab08_07.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
+//การทดลองครั้งที่7
 #include <iostream>
 
 int main()
